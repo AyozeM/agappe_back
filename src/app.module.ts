@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { InMemoryDBModule } from '@nestjs-addons/in-memory-db';
+import { AgappeModule } from './modules/agappe/agappe.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [AgappeModule],
+  controllers: [],
+  providers: [],
 })
-export class AppModule {}
+export class AppModule { }
